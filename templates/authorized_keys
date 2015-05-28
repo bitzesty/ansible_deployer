@@ -1,0 +1,3 @@
+{% for item in deployer_authorized_keys %}
+{{ item }}
+{% endfor %}

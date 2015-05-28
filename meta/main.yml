@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  author: "Bitzesty LTD"
+  description: "Sets up deployer user account"
+  license: MIT
+  min_ansible_version: 1.9
+  version: 0.0.1
+  platforms:
+   - name: Ubuntu
+     versions:
+      - precise
+      - quantal
+      - raring
+      - saucy
+  categories:
+    - system
+    - web
