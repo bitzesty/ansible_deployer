@@ -24,14 +24,14 @@ Home directory (default is '/home/{{ user }}'):
 home_directory: "/home/vasily"
 ```
 
-Trusted domains (defailt: ['github']).
+Trusted domains (defailt: ['github']).<br/>
 Adds trusted domains to known hosts.
 ```
 deployer_ssh_keyscan_domains:
   - bitbucket.org
 ```
 
-Trusted authorized SSH keys (defailt: []).
+Trusted authorized SSH keys (defailt: []).<br/>
 Uploads authorized SSH keys to /home/{{ deployer }}/.ssh/authorized_keys.
 ```
 deployer_authorized_keys: [
