@@ -1,3 +1,5 @@
+---
 tasks:
-  - include: create_deployer_and_setup_ssh.yml
+  - include: ssh_setup.yml
+  - include: create_deployer_user.yml
   - include: copy_trusted_github_users.yml

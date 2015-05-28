@@ -1,0 +1,13 @@
+---
+- name: Update /etc/ssh/ssh_config
+  template:
+    src=ssh_config
+    dest=/etc/ssh/ssh_config
+
+- name: Update /etc/ssh/sshd_config
+  template:
+    src=sshd_config
+    dest=/etc/ssh/sshd_config
+  notify:
+    - restart ssh
+    - restart dbus

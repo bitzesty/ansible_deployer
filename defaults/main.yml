@@ -1,3 +1,4 @@
+---
 user: "deployer"
 home_directory: "/home/{{ user }}"
 deployer_ssh_keyscan_domains:

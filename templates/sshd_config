@@ -1,0 +1,19 @@
+# Do NOT modify this file by hand!
+
+ChallengeResponseAuthentication no
+UsePAM yes
+Port 22
+Protocol 2
+KeyRegenerationInterval 1h
+ServerKeyBits 768
+SyslogFacility AUTH
+LogLevel INFO
+LoginGraceTime 2m
+PermitRootLogin yes
+StrictModes yes
+IgnoreRhosts yes
+PermitEmptyPasswords yes
+X11Forwarding no
+UsePrivilegeSeparation yes
+AuthorizedKeysFile %h/.ssh/authorized_keys
+Subsystem sftp /usr/lib/openssh/sftp-server
