@@ -1,0 +1,23 @@
+- name: get SSH keys from GitHub
+  uri: >
+    url=https://github.com/{{ item }}.keys
+    return_content=true
+  register: ssh_keys
+  with_items: trusted_usernames_from_github
+
+- name: add SSH key labels to ~/.ssh/authorized_keys
+  lineinfile: >
+    dest={{ home_directory }}/.ssh/authorized_keys
+    line="# {{ item }}"
+  with_items: trusted_usernames_from_github
+
+- name: add SSH keys to ~/.ssh/authorized_keys
+  lineinfile: >
+    dest={{ home_directory }}/.ssh/authorized_keys
+    line="{{ item.0.content }}"
+    insertafter={{ item.1 }}
+  with_together:
+    - ssh_keys.results
+    - trusted_usernames_from_github
+  changed_when: false
+  when: "trusted_usernames_from_github | count > 0"

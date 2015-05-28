@@ -5,8 +5,9 @@
 Sets up deployer user account.
 
 * Creates new deployer user
-* Sets up SSH Authorized Keys
 * Uploads deployer's SSH Private Key
+* Uploads SSH Authorized Keys
+* Uploads SSH keys from github.com for list of trusted users
 * Add Specific Domains SSH Keys (github.com) to known hosts
 * Adds default deployer's .bashrc, .profile, .gemrc, .bundle
 
@@ -22,10 +23,10 @@ Home directory (default is '/home/{{ user }}')
 home_directory: "/home/vasily"
 ```
 
-Deployer keyscan domains (adds Domain to known hosts):
+Adds trusted domains to known hosts (default is 'github.com' only):
 ```
 deployer_ssh_keyscan_domains:
-  - github.com
+  - bitbucket.org
 ```
 
 Deployer authorized keys (list of authorized SSH keys).
@@ -33,6 +34,15 @@ They would be added to /home/{{ deployer }}/.ssh/authorized_keys.
 ```
 deployer_authorized_keys: [
   "ssh-rsa AAAAB3NzaC1yc2EAAA ....",
+  ...
+]
+```
+
+List of trusted usernames from github.com:
+```
+trusted_usernames_from_github: [
+  "ryanb",
+  "dhh",
   ...
 ]
 ```
