@@ -40,7 +40,7 @@ deployer_authorized_keys: [
 ]
 ```
 
-List of trusted usernames from github.com (defailt: []).
+List of trusted usernames from github.com (defailt: []).<br/>
 Uploads SSH keys from github.com for trusted github usernames.
 ```
 trusted_usernames_from_github: [
