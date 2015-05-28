@@ -4,6 +4,7 @@
 
 Sets up deployer user account.
 
+* Applies custom SSH config files (/etc/ssh/ssh_config and /etc/ssh/sshd_config)
 * Creates new deployer user
 * Uploads deployer's SSH Private Key
 * Uploads SSH Authorized Keys
@@ -47,6 +48,16 @@ trusted_usernames_from_github: [
   "dhh",
   ...
 ]
+```
+
+#### Role Templates
+
+```
+bashrc-user
+gemrc
+profile
+ssh_config
+sshd_config
 ```
 
 #### Example Playbook
