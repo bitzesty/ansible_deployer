@@ -1,6 +1,6 @@
 ## Bit Zesty's Ansible Packages Role
 
-**For recent changes please refer to [the changelog](https://github.com/bitzesty/ansible_packages/blob/master/CHANGELOG.md)**.
+**For recent changes please refer to [the changelog](https://github.com/bitzesty/ansible_deployer/blob/master/CHANGELOG.md)**.
 
 Sets up deployer user account.
 
